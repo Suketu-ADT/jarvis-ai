@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar glass-panel">
+            <div class="logo-container">
+                <div class="logo-orb"></div>
+                <h1 class="logo-text">JARVIS</h1>
+            </div>
+            
+            <div class="nav-links">
+                <button class="nav-item active" data-tab="chat" id="tab-chat">
+                    <i data-lucide="message-square"></i>
+                    <span>Chat</span>
+                </button>
+                <button class="nav-item" data-tab="code" id="tab-code">
+                    <i data-lucide="code"></i>
+                    <span>Code</span>
+                </button>
+                <button class="nav-item" data-tab="system" id="tab-system">
+                    <i data-lucide="activity"></i>
+                    <span>System</span>
+                </button>
+                <button class="nav-item" data-tab="settings" id="tab-settings">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </button>
+            </div>
+
+            <div class="status-panel glass-panel">
+                <div class="status-item">
+                    <span class="status-label">Engine</span>
+                    <span class="status-value online" id="engine-status">Online</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Memory</span>
+                    <span class="status-value">Active</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Chat Tab -->
+            <section id="chat-section" class="content-section active">
+                <div class="section-header">
+                    <h2 class="neon-text">Communication Link</h2>
+                    <div class="ai-state-indicator" id="ai-state-label">IDLE</div>
+                </div>
+
+                <div class="chat-container glass-panel">
+                    <div class="messages-area" id="messages-area">
+                        <div class="message jarvis">
+                            <div class="message-content">
+                                <div class="intent-tag">[SYSTEM]</div>
+                                <div class="text">Hello, I am JARVIS. How can I assist you today?</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-area">
+                        <button class="icon-btn mic-btn" id="mic-btn">
+                            <i data-lucide="mic"></i>
+                        </button>
+                        <div class="input-wrapper">
+                            <input type="text" id="chat-input" placeholder="Command JARVIS..." autocomplete="off">
+                        </div>
+                        <button class="icon-btn send-btn" id="send-btn">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Tab -->
+            <section id="code-section" class="content-section">
+                <div class="section-header">
+                    <h2 class="neon-text">Coding Workspace</h2>
+                </div>
+                <div class="placeholder-card glass-panel">
+                    <i data-lucide="terminal" size="48"></i>
+                    <p>The neural coding interface is being synchronized...</p>
+                </div>
+            </section>
+
+            <!-- System Tab -->
+            <section id="system-section" class="content-section">
+                <div class="section-header">
+                    <h2 class="neon-text">System Monitoring</h2>
+                </div>
+                <div class="placeholder-card glass-panel">
+                    <i data-lucide="cpu" size="48"></i>
+                    <p>Real-time resource utilization metrics are being calculated.</p>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section id="settings-section" class="content-section">
+                <div class="section-header">
+                    <h2 class="neon-text">Core Preferences</h2>
+                </div>
+                <div class="placeholder-card glass-panel">
+                    <i data-lucide="sliders" size="48"></i>
+                    <p>Configure model endpoints, voice profiles, and interface aesthetics.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right AI Orb Sidebar -->
+        <aside class="orb-sidebar">
+            <div class="orb-container">
+                <div class="orb-outer" id="orb-outer"></div>
+                <div class="orb-inner" id="orb-inner"></div>
+            </div>
+            <div class="orb-status" id="orb-status-text">SYSTEM READY</div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+websockets
+langchain
+langchain-community
+langgraph
+sqlalchemy
+psycopg2-binary
+chromadb
+pyautogui
+psutil
+python-dotenv
+httpx
+pydantic
+faster-whisper
+piper-tts
