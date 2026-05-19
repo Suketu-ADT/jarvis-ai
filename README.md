@@ -75,7 +75,7 @@ graph TD;
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/jarvis-ai.git
+git clone https://github.com/Suketu-ADT/jarvis-ai.git
 cd jarvis-ai
 ```
 
@@ -114,7 +114,7 @@ The JARVIS UI will be available at `http://localhost:5173`. Connect your microph
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/jarvis-ai/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Suketu-ADT/jarvis-ai/issues).
 
 ## 📝 License
 
